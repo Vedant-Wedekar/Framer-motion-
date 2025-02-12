@@ -1,0 +1,50 @@
+Basic Usage – <motion> Component
+-------------IAT----------------
+
+import { motion } from "framer-motion";
+
+<motion.div
+  initial={{ opacity: 0 }}
+  animate={{ opacity: 1 }}
+  transition={{ duration: 0.5 }}
+>
+  Hello, Motion!
+</motion.div>
+---------------------------------------
+some important attribute--------------
+<motion.div whileHover={{ scale: 1.2 }} />
+<motion.button whileTap={{ scale: 0.9 }}>Click me</motion.button>
+<motion.div
+  animate={{ x: 100 }}
+  transition={{ duration: 1, ease: "easeInOut" }}
+/>
+<motion.div drag dragConstraints={{ left: -100, right: 100 }} />
+<motion.div
+  animate={{ x: [0, 50, 100, 50, 0] }}
+  transition={{ duration: 2 }}
+/>
+------------------------------------------------------------
+Common transition properties:
+
+duration (time in seconds)
+ease (easeIn, easeOut, easeInOut, linear, etc.)
+delay (delay before animation starts)
+repeat (number of times the animation repeats)
+repeatType (loop, reverse, mirror)
+-----------------------------------------------------------
+Keyframes (Multiple Animation Steps)
+<motion.div
+  animate={{ x: [0, 50, 100, 50, 0] }}
+  transition={{ duration: 2 }}
+/>
+-----------------------------------------------------------
+ Scroll-Based Animations (useScroll)
+import { useScroll } from "framer-motion";
+
+const { scrollYProgress } = useScroll();
+<motion.div style={{ scaleX: scrollYProgress }} />;
+--------------------------------------------------------
+
+
+🚀 Final Thoughts
+Framer Motion is an excellent tool for modern web development, making animations smooth, intuitive, and highly customizable. Let me know if you need examples for a specific use case! 🎨✨
