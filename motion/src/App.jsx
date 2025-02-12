@@ -1,7 +1,7 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Fuck from './pages/Fuck'; // Ensure correct file path
-import Hedge from './pages/hedge';
+import Hedge from './pages/Hedge';
 const App = () => {
   return (
     <div>
@@ -13,4 +13,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default App;  
